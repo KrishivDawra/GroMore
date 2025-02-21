@@ -1,38 +1,58 @@
-// TradingViewWidget.jsx
-import React, { useEffect, useRef, memo } from 'react';
+import React, { useEffect, useRef, memo } from "react";
 
 function TradingViewWidget() {
-  const container = useRef();
+  const container = useRef(null);
 
-  useEffect(
-    () => {
-      const script = document.createElement("script");
-      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
-      script.type = "text/javascript";
-      script.async = true;
-      script.innerHTML = `
-        {
-          "autosize": true,
-          "symbol": "NASDAQ:AAPL",
-          "interval": "3",
-          "timezone": "Etc/UTC",
-          "theme": "dark",
-          "style": "1",
-          "locale": "en",
-          "allow_symbol_change": true,
-          "calendar": false,
-          "support_host": "https://www.tradingview.com"
-        }`;
-      container.current.appendChild(script);
-    },
-    []
-  );
+  useEffect(() => {
+    // Clear previous widget if it exists
+    if (container.current) {
+      container.current.innerHTML = ""; // This ensures only one widget is added
+    }
+
+    const script = document.createElement("script");
+    script.src =
+      "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
+    script.type = "text/javascript";
+    script.async = true;
+    script.innerHTML = `
+      {
+        "autosize": true,
+        "symbol": "NASDAQ:AAPL",
+        "interval": "3",
+        "timezone": "Etc/UTC",
+        "theme": "dark",
+        "style": "1",
+        "locale": "en",
+        "allow_symbol_change": true,
+        "calendar": false,
+        "support_host": "https://www.tradingview.com"
+      }`;
+
+    container.current.appendChild(script);
+  }, []);
 
   return (
-    <div className="tradingview-widget-container py-10" ref={container} style={{ height: "100%", width: "100%" }}>
-      <div className="tradingview-widget-container__widget" style={{ height: "calc(100% - 32px)", width: "100%" }}></div>
-      <div className="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span className="blue-text">Track all markets on TradingView</span></a></div>
-    </div>
+    <div
+  className="tradingview-widget-container flex justify-center items-center p-15"
+  ref={container}
+  style={{ 
+    height: "50vh", // Half of the page height
+    width: "100%",
+    marginTop: "70px" // Push below header
+  }}
+>
+  <div className="tradingview-widget-container__widget w-full h-full"></div>
+  <div className="tradingview-widget-copyright absolute bottom-2 right-2">
+    <a
+      href="https://www.tradingview.com/"
+      rel="noopener nofollow"
+      target="_blank"
+    >
+      <span className="blue-text">Track all markets on TradingView</span>
+    </a>
+  </div>
+</div>
+
   );
 }
 

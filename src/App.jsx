@@ -28,6 +28,7 @@ const App = () => {
           <Route path="/home" element={<ProtectedRoute><Body/></ProtectedRoute>} />
           <Route path="/Tradeview" element={<ProtectedRoute><TradingViewWidget/></ProtectedRoute>} />
           <Route path="/Course" element={<ProtectedRoute><Course /></ProtectedRoute>} />
+          <Route path="/meetify" element={<ProtectedRoute><Meetify/></ProtectedRoute>} />
 
           {/* Catch-all 404 Route */}
           <Route path="*" element={<div>Error 404 found</div>} />
