@@ -8,6 +8,7 @@ import Services from "./Services";
 import Products from "./Products";
 import AuthApp from "./AuthApp";
 import ProtectedRoute from "./components/ProtectedRoute"; // Import Protected Route
+import LandingPage from "./LandingPage";
 
 const App = () => {
   const { isAuthenticated } = useAuth0();
@@ -23,7 +24,7 @@ const App = () => {
 
           {/* ✅ Protected Routes */}
           <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
-          <Route path="/home" element={<ProtectedRoute><Body /></ProtectedRoute>} />
+          <Route path="/home" element={<ProtectedRoute><LandingPage/></ProtectedRoute>} />
           <Route path="/services" element={<ProtectedRoute><Services /></ProtectedRoute>} />
           <Route path="/product" element={<ProtectedRoute><Products /></ProtectedRoute>} />
 
