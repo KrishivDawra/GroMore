@@ -9,11 +9,11 @@ import AuthApp from "./AuthApp"; // Separate Auth Component
 
 const App = () => {
   return (
-    <div className="px-14 py-4 bg-amber-50">
+    <div className="px-14 py-4 bg-black">
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Body />} />
+          <Route path="/" element={<Body />} /> 
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/product" element={<Products />} />
