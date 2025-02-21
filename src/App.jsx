@@ -1,31 +1,28 @@
-import About from "./About"
-import Body from "./components/Body"
-import Header from "./components/Header"
-import { BrowserRouter,Route, Routes } from "react-router-dom"
-import Services from "./Services"
-import Products from "./Products"
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import About from "./About";
+import Body from "./components/Body";
+import Services from "./Services";
+import Products from "./Products";
+import AuthApp from "./AuthApp"; // Separate Auth Component
 
-function App() {
-
+const App = () => {
   return (
-    <>
-    <div className="px-14 py-4 bg-amber-50 ">
+    <div className="px-14 py-4 bg-amber-50">
       <BrowserRouter>
-        <Header/>
+        <Header />
         <Routes>
-            <Route path='/' element={<Body/>}></Route>
-            <Route path='/about' element={<About/>}></Route>
-            <Route path='/services' element={<Services/>}></Route>
-            <Route path='/product' element={<Products/>}></Route>
-            <Route path="*" element={<div>Error 404 found</div>}></Route>
+          <Route path="/" element={<Body />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/product" element={<Products />} />
+          <Route path="/auth" element={<AuthApp />} />
+          <Route path="*" element={<div>Error 404 found</div>} />
         </Routes>
-        
-        
       </BrowserRouter>
     </div>
-      
-    </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
