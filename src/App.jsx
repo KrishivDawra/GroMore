@@ -4,7 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Header from "./components/Header";
 import About from "./About";
 import Body from "./components/Body";
-import Trading from "./Trading"
+import TradingViewWidget from "./TradingViewWidget"
 import Course from "./Course"
 import AuthApp from "./AuthApp";
 import ProtectedRoute from "./components/ProtectedRoute"; // Import Protected Route
@@ -26,7 +26,7 @@ const App = () => {
           {/* ✅ Protected Routes */}
           <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
           <Route path="/home" element={<ProtectedRoute><Body/></ProtectedRoute>} />
-          <Route path="/Tradeview" element={<ProtectedRoute><Trading/></ProtectedRoute>} />
+          <Route path="/Tradeview" element={<ProtectedRoute><TradingViewWidget/></ProtectedRoute>} />
           <Route path="/Course" element={<ProtectedRoute><Course /></ProtectedRoute>} />
           <Route path="/meetify" element={<ProtectedRoute><Meetify/></ProtectedRoute>} />
 
