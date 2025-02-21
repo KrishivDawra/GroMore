@@ -2,7 +2,7 @@ import React from 'react'
 
 const Body = () => {
   return (
-    <div>
+    <div className='h-screen bg-[url()] '>
       
     </div>
   )
