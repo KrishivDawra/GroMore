@@ -8,6 +8,7 @@ import Body from "./components/Body";
 // import Products from "./Products";
 import AuthApp from "./AuthApp";
 import ProtectedRoute from "./components/ProtectedRoute"; // Import Protected Route
+import Meetify from "./Meetify";
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
           <Route path="/home" element={<ProtectedRoute><Body/></ProtectedRoute>} />
           <Route path="/services" element={<ProtectedRoute><Services /></ProtectedRoute>} />
+          <Route path="/services" element={<ProtectedRoute><Meetify/></ProtectedRoute>} />
           <Route path="/product" element={<ProtectedRoute><Products /></ProtectedRoute>} />
 
           {/* Catch-all 404 Route */}

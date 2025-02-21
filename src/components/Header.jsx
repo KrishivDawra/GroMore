@@ -13,6 +13,7 @@ const Header = () => {
         <h1 className='font-serif text-xl text-white cursor-pointer'><Link to={'/home'}>Home</Link></h1>
         <h1 className='font-serif text-xl text-white'><Link >TradeView</Link></h1>
         <h1 className='font-serif text-xl text-white'><Link>News</Link></h1>
+        <h1 className='font-serif text-xl text-white'><Link>News</Link></h1>
         <h1 className='font-serif text-xl text-white'><Link>Courses</Link></h1>
         <h1 className='font-serif text-xl text-white'><Link>About</Link></h1>
       </div>
