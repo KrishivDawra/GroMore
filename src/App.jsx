@@ -4,8 +4,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Header from "./components/Header";
 import About from "./About";
 import Body from "./components/Body";
-// import Services from "./Services";
-// import Products from "./Products";
+import Trading from "./Trading"
+import Course from "./Course"
 import AuthApp from "./AuthApp";
 import ProtectedRoute from "./components/ProtectedRoute"; // Import Protected Route
 
@@ -25,8 +25,8 @@ const App = () => {
           {/* ✅ Protected Routes */}
           <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
           <Route path="/home" element={<ProtectedRoute><Body/></ProtectedRoute>} />
-          <Route path="/services" element={<ProtectedRoute><Services /></ProtectedRoute>} />
-          <Route path="/product" element={<ProtectedRoute><Products /></ProtectedRoute>} />
+          <Route path="/Tradeview" element={<ProtectedRoute><Trading/></ProtectedRoute>} />
+          <Route path="/Course" element={<ProtectedRoute><Course /></ProtectedRoute>} />
 
           {/* Catch-all 404 Route */}
           <Route path="*" element={<div>Error 404 found</div>} />
