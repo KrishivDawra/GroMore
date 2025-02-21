@@ -13,7 +13,7 @@ const App = () => {
   const { isAuthenticated } = useAuth0();
 
   return (
-    <div className="px-14 py-4 bg-black text-white">
+    <div className="px-14 py-4 pt-6 bg-black text-white">
       <BrowserRouter>
         <Header />
         <Routes>
