@@ -2,7 +2,7 @@
   "name": "react",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "CommonJS",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.3.0",
+    "@truffle/hdwallet-provider": "^2.1.15",
+    "dotenv": "^16.4.7",
     "framer-motion": "^12.4.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.1"
+    "react-router-dom": "^6.28.1",
+    "web3": "^4.16.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
