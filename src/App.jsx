@@ -9,7 +9,7 @@ import AuthApp from "./AuthApp"; // Separate Auth Component
 
 const App = () => {
   return (
-    <div className="px-14 py-4 bg-black">
+    <div className="px-14 py-4 pt-6 bg-black">
       <BrowserRouter>
         <Header />
         <Routes>
