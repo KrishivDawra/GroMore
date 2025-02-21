@@ -4,11 +4,11 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Header from "./components/Header";
 import About from "./About";
 import Body from "./components/Body";
-import Services from "./Services";
-import Products from "./Products";
+// import Services from "./Services";
+// import Products from "./Products";
 import AuthApp from "./AuthApp";
 import ProtectedRoute from "./components/ProtectedRoute"; // Import Protected Route
-import LandingPage from "./LandingPage";
+
 
 const App = () => {
   const { isAuthenticated } = useAuth0();
