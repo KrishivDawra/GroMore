@@ -21,10 +21,10 @@ const App = () => {
           {/* Public Routes */}
           {/* <Route path="/" element={<Body />} /> */}
           <Route path="/" element={<AuthApp />} />
-
+          {/* <Route path="/home" element={<Body/>}/> */}
           {/* ✅ Protected Routes */}
           <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
-          <Route path="/home" element={<ProtectedRoute><LandingPage/></ProtectedRoute>} />
+          <Route path="/home" element={<ProtectedRoute><Body/></ProtectedRoute>} />
           <Route path="/services" element={<ProtectedRoute><Services /></ProtectedRoute>} />
           <Route path="/product" element={<ProtectedRoute><Products /></ProtectedRoute>} />
 
