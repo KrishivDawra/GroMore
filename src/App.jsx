@@ -8,6 +8,7 @@ import Trading from "./Trading"
 import Course from "./Course"
 import AuthApp from "./AuthApp";
 import ProtectedRoute from "./components/ProtectedRoute"; // Import Protected Route
+import Meetify from "./Meetify";
 
 
 const App = () => {
