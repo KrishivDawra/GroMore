@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import Header from "./components/Header";
 import About from "./About";
+import News from "./News";
 import Body from "./components/Body";
 import TradingViewWidget from "./TradingViewWidget"
 import Course from "./Course"
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
           <Route path="/home" element={<ProtectedRoute><Body/></ProtectedRoute>} />
           <Route path="/Tradeview" element={<ProtectedRoute><TradingViewWidget/></ProtectedRoute>} />
+          <Route path="/news" element={<ProtectedRoute><News/></ProtectedRoute>} />
           <Route path="/Course" element={<ProtectedRoute><Course /></ProtectedRoute>} />
           <Route path="/meetify" element={<ProtectedRoute><Meetify/></ProtectedRoute>} />
 

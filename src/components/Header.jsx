@@ -12,7 +12,7 @@ const Header = () => {
       <div className='flex gap-12'>
         <h1 className='font-serif text-xl text-white cursor-pointer'><Link to={'/home'}>Home</Link></h1>
         <h1 className='font-serif text-xl text-white'><Link to={'/Tradeview'}>TradeView</Link></h1>
-        <h1 className='font-serif text-xl text-white'><Link>News</Link></h1>
+        <h1 className='font-serif text-xl text-white'><Link to={'/news'}>News</Link></h1>
         <h1 className='font-serif text-xl text-white'><Link to={'/meetify'}>Meetify</Link></h1>
         <h1 className='font-serif text-xl text-white'><Link to={'/Course'}>Courses</Link></h1>
         <h1 className='font-serif text-xl text-white'><Link to={'/about'}>About</Link></h1>
