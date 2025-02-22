@@ -92,7 +92,7 @@ const About = () => {
       </section>
 
       {/* Full-Screen Section 3: Social Media & Community */}
-      <section className="h-screen flex flex-col justify-center items-center text-center px-6 w-3/4 mt-10">
+      <section className="h-screen flex flex-col justify-center items-center text-center px-6 w-3/4 mt-28 ">
         <h2 className="text-5xl font-bold mb-8">Join Our Growing Community</h2>
         <p className="text-xl text-gray-300 max-w-3xl leading-8">
           Stay ahead in the stock market with <strong>real-time insights, AI predictions, and a thriving community</strong> of traders.
