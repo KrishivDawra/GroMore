@@ -6,28 +6,30 @@ const News = () => {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Clear previous script to prevent duplicates
-    containerRef.current.innerHTML = "";
+    // Delay script execution to ensure the component is mounted
+    const timeoutId = setTimeout(() => {
+      containerRef.current.innerHTML = ""; // Clear any previous widget instances
 
-    const script = document.createElement("script");
-    script.src = "https://s3.tradingview.com/external-embedding/embed-widget-timeline.js";
-    script.type = "text/javascript";
-    script.async = true;
-    script.innerHTML = JSON.stringify({
-      feedMode: "all_symbols",
-      isTransparent: false,
-      displayMode: "regular",
-      width: "910",
-      height: "610",
-      colorTheme: "dark",
-      locale: "en",
-    });
+      const script = document.createElement("script");
+      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-timeline.js";
+      script.type = "text/javascript";
+      script.async = true;
+      script.innerHTML = JSON.stringify({
+        feedMode: "all_symbols",
+        isTransparent: false,
+        displayMode: "regular",
+        width: "910",
+        height: "610",
+        colorTheme: "dark",
+        locale: "en",
+      });
 
-    containerRef.current.appendChild(script);
+      containerRef.current.appendChild(script);
+    }, 500); // 👈 Adding a slight delay to ensure React has mounted the component
 
     return () => {
-      // Cleanup to prevent memory leaks
-      containerRef.current.innerHTML = "";
+      clearTimeout(timeoutId);
+      containerRef.current.innerHTML = ""; // Cleanup
     };
   }, []);
 
