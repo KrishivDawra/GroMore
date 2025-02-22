@@ -15,7 +15,7 @@ const Header = () => {
         <h1 className='font-serif text-xl text-white'><Link>News</Link></h1>
         <h1 className='font-serif text-xl text-white'><Link to={'/meetify'}>Meetify</Link></h1>
         <h1 className='font-serif text-xl text-white'><Link to={'/Course'}>Courses</Link></h1>
-        <h1 className='font-serif text-xl text-white'><Link>About</Link></h1>
+        <h1 className='font-serif text-xl text-white'><Link to={'/about'}>About</Link></h1>
       </div>
 
 
